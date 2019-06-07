@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自执行函数</title>
+</head>
+<body>
+  <script>
+    // 自执行函数，也叫自调用函数，就是定义完了马上进行调用，只会执行一次
+    // var fn = function () {
+    //   console.log(123);
+    // }
+
+    // fn();
+    // (function () {
+    //     console.log(123);
+    //   })();
+     
+    //  (function () {
+    //     console.log(456);
+    //   }());
+
+    // var getSum = function (n1,n2) {
+    //   var sum = n1 + n2;
+    //   console.log(sum);
+    // };
+    // getSum(10,20);
+    // (function (n1, n2) {
+    //     var sum = n1 + n2;
+    //     console.log(sum);
+    //   })(10,20);
+
+    //   (function (n1, n2) {
+    //       var sum = n1 + n2;
+    //       console.log(sum);
+    //     }(100, 200));
+
+    var f1 = function () {
+      console.log(123);
+    }
+    ;(function(){ console.log(456);}())
+  </script>
+</body>
+</html>

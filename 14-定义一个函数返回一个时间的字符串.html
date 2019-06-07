@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>定义函数返回时间的字符串</title>
+</head>
+
+<body>
+  <script>
+
+    function getDateString(date) {
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1; // 外国人将月份设定成从0开始，咱们需要+1
+      var day = date.getDate();
+      var hour = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+      // if(month<10){
+      //   month = "0" + month;
+      // }
+      // if
+      month = month < 10 ? "0" + month : month;
+      day = day < 10 ? "0" + day : day;
+      hour = hour < 10 ? "0" + hour : hour;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      // 将年月日时分秒连接成字符串
+      var str = year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + seconds;
+      console.log(str);
+      // yyyy-MM-dd HH:mm:ss
+    }
+    var date = new Date();
+    getDateString(date)
+  </script>
+</body>
+
+</html>

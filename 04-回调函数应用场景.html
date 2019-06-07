@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>回调函数</title>
+</head>
+<body>
+  <script>
+    // 求两个数的运算结果，并封装成函数
+  //   function getRresult(n1,n2, operator){
+  //     if(operator==='+'){
+  //       return n1 + n2;
+  //     }else if(operator==='-'){
+  //       return n1 - n2;
+  //     }else if(operator==='*'){
+  //       return n1*n2;
+  //     }else if(operator==='/'){
+  //       return n1/n2;
+  //     }
+  //   }
+
+  //  var res = getRresult(100,20,'*')
+  //  console.log(res);
+
+    function getRresult(n1,n2,fn){
+      if(typeof fn==='function'){
+       var result = fn(n1,n2);
+       return result;
+      }
+    }
+    // var getSum = function(n1,n2){
+    //   return n1 + n2;
+    // }
+    // var res = getRresult(100,20,getSum)
+    // var res = getRresult(100,20,getSum)
+    // 使用回调来获取真正的数据
+    var res = getRresult(100,20, function (n1, n2) {
+        return n1 - n2;
+      })
+    console.log(res);
+    var res1 = getRresult(100, 20, function (n1, n2) {
+        return n1 + n2;
+      })
+    var res2 = getRresult(100, 20, function (n1, n2) {
+          return n1 * n2;
+      })
+
+    // 了解  学会  熟练   沉淀
+    // 练功不练拳，好像无舵船
+    // 练拳不练功，到头一场空
+  </script>
+</body>
+</html>

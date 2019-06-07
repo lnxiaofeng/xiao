@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>回调函数</title>
+</head>
+<body>
+  <script>
+    // 把函数当做参数来进行传递，这样的函数叫做回调函数
+    var num = 10;
+    // var num = function(){
+    //   console.log('我是一个匿名函数体');
+    // }
+    // num();
+     function aaa(){
+       console.log('这是函数声明的方式定义的函数');
+     } 
+    //  aaa()
+    console.log(typeof num);
+    function f1(n){
+      // console.log(n);
+      // n();
+      if(typeof n==='function'){
+        n();
+        return;
+      }
+      console.log(n);
+    }
+
+    // f1(num);  // 把函数名传进来，就韵味着将函数体传进来了
+    f1(aaa); // 把函数名传进来，就韵味着将函数体传进来了
+    // f1(num);
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>定义对象的方式</title>
+</head>
+<body>
+  <script>
+    /**
+     * 日期的构造函数是Date()
+     * 数组的构造函数是Array()
+     * 对象的构造函数是Object()
+     **/
+    // 描述  name小葱 age 18  男  18
+    // var obj = new Object();
+    // obj.name = "小葱";
+    // obj.age = 18;
+    // obj.sex = "男";
+    // obj.score = 18;
+    // console.log(obj);
+
+    // var obj = {};
+    // obj.name = "小葱";
+    // obj.age = 18;
+    // obj.sex = "男";
+    // obj.score = 18;
+    // console.log(obj);
+    var aaa = {  
+      name:"小葱",
+      age:18,
+      sex:"男",
+      score:18,
+      sayHi:function(){
+        console.log("大家好，我叫"+this.name+"，今年"+this.age+"岁了，考试成绩"+this.score+"分");
+      }
+    }
+    // name是一个特殊的变量或属性，是window里面直接存在的 window.name
+    // console.log(obj);
+    // 对象方法中的this，始终指向或始终表示当前对象
+    aaa.sayHi()
+
+    // var obj1 = {}
+    // obj1.name = "tom"
+  </script>
+</body>
+</html>

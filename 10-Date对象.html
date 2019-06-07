@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Date日期对象</title>
+</head>
+<body>
+  <script>
+    // Date日期对象是一个实例对象，必须通过new之后才能使用
+    // 日期的本质其实就是13位的阿拉伯数字
+    var date = new Date()
+    console.log(date);
+    console.log(date.valueOf()); // 1554365390583  13位的阿拉伯数字 1970-1-1 0:00:00
+    console.log(date.toDateString());
+    console.log(date.toLocaleDateString());
+    console.log(date.toTimeString());
+    console.log(date.toLocaleTimeString());
+  </script>
+</body>
+</html>

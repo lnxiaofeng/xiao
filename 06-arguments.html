@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>arguments</title>
+</head>
+<body>
+  <script>
+    // js可以使用argument来模拟重载
+    // js中的函数的形参和实参的个数可以不一样多，不会报错
+    function getSum(n){
+      return n;
+    }
+    // function getSum(n1,n2){
+    //   // return n1 + n2;
+    // }
+
+    function getSum(){
+      // console.log(arguments);
+      // console.log(arguments.length);
+      // arguments是js中函数所特有的一个伪数组对象
+      // 伪数组:不是一个真正的数组，但是和数组的用法是一样的，可以使用索引或是下标 获取arguments中的数据值，也可以使用length属性来获取数组的长度
+      var sum = 0;
+      for(var i=0;i<arguments.length;i++){
+        sum += arguments[i]
+      }
+      return sum;
+    }
+
+    var sum = getSum(10,20,30)  // 10 NaN
+    console.log(sum);
+  </script>
+</body>
+</html>

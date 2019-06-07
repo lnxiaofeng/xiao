@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Math</title>
+</head>
+<body>
+  <script>
+    // 就是js这门语言本身早就定义好的对象
+    // 基本数据类型，复杂数据类型
+    // 对象由属性和方法组成
+    // 在全局使用域中的顶级对象是window，在全局作用域中定义的变量或函数，其实都是window的属性和方法
+    // 方法就是函数，函数就是方法，在使用对象调用函数的时候，这个函数就叫做方法
+    // Math 属于js中的静态对象,不需要new(创建，构造),直接拿 过来使用即可
+    var res = Math.random();  // Math.random()是生成0--1之间的随机小数 0能取到，1取不到
+    console.log(res);
+    // var num = Math.pow(2,10);
+    // console.log(num);
+    console.log(Math.pow(2, 10));
+    console.log(Math.round(4.2));
+    console.log(Math.round(4.5));
+    console.log(Math.ceil(10.2));  // 取当前数的最大整数
+    console.log(Math.ceil(-1.2));
+    console.log(Math.floor(-1.2)); // 取当前数的最小整数
+    console.log(Math.abs(-2));  // 正数的绝对值是本身 5 10 -6
+    console.log(Math.max(10,26,32,19,99,63));
+    console.log(Math.min(10,26,32,19,99,63));
+    console.log(Math.PI);
+    // alert('hello world')
+
+    // 生成一个随机的16进制的颜色 0-9a-f
+    // #000000  #ffffff   #fa20cd
+  </script>
+</body>
+</html>

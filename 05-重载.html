@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>重载</title>
+</head>
+<body>
+  <script>
+    // js当是是没有函数的重载的
+    // 重载就是函数名相同，但是函数的参数个数或是参数的类型不同，这就构成了函数的重载,针对于后端语言而言
+    // js当中的函数，如果有重名的，以最后的为主
+    // 重载的好处是可以让我们的函数更加的函数多变
+    function getSum(n1,n2){
+      return n1 + n2;
+    }
+    function getSum(n1,n2,n3){
+      return n1 + n2 + n3;
+    }
+
+    var sum = getSum(10,20);
+    console.log(sum); // 30  undefined 报错  NaN
+    
+
+    // function getResult(int n1,int n2){
+
+    // }
+    // function getResult(int n1,int n2,int n3){
+
+    // }
+    // function getResult(int n1,string str){
+
+    // }
+    // getResult(10,"abc")
+  </script>
+</body>
+</html>

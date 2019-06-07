@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>获取对象中的属性值</title>
+</head>
+<body>
+  <script>
+    // 对象中的属性就相当于是全局作用域中的变量，都是用来存储数据的
+    // 对象中的方法都相当于是函数，是一种功能
+    // 对象就相当于是一个包裹，里面有很多的数据
+    // 万物皆对象，万物皆属性
+    var aaa = {
+        name: "小葱",
+        age: 18,
+        sex: "男",
+        score: 18,
+        address:"天河区",
+        sayHi: function () {
+          console.log("大家好，我叫" + this.name + "，今年" + this.age + "岁了，考试成绩" + this.score + "分");
+        }
+      }
+      // console.log(aaa.age);
+      console.log(aaa['age']);
+      // console.log(aaa.sex);
+      console.log(aaa['sex']);
+      // console.log(aaa.sayHi);
+      // 使用for  in 来遍历对象
+      // for(var key in aaa){
+      //   console.log(aaa[key]);
+      // }
+
+      // 访问对象属性值的方式有两种:
+      // 1. 对象名.属性名
+      // 2. 对象名[属性名]
+       // js是一门动态的弱类型语言
+      var obj1 = {
+        name:"tom",
+        age:20,
+        hobby:["游泳","抽烟"],
+        foo:{
+          age:20,
+          score:30
+        }
+      }
+      console.log(obj1.foo.score);
+  </script>
+</body>
+</html>
